@@ -34,9 +34,9 @@ public class MainActivity extends AppCompatActivity {
         super.onPause();
 
         SharedPreferences prefs = getPreferences(MODE_PRIVATE); //obtain sharedpreferences instance
-        SharedPreferences.Editor prefEdit = prefs.edit();
-        prefEdit.putString("greetings","Hello!");
-        prefEdit.commit();
+        SharedPreferences.Editor prefEdit = prefs.edit(); //create SharedPrefs editor by calling edit()
+        prefEdit.putString("greetings","Hello!"); //set key-value pair in editor
+        prefEdit.commit(); //save changes made to the SharedPrefs, prefs.
 
     }
 
